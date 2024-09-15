@@ -1,0 +1,468 @@
+.hito-robotics {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.hito-robotics .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1398px;
+  height: 2503px;
+  position: relative;
+}
+
+.hito-robotics .footer {
+  display: flex;
+  flex-direction: column;
+  width: 1413px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 2356px;
+  left: -20px;
+}
+
+.hito-robotics .overlap-wrapper {
+  position: relative;
+  width: 1600px;
+  height: 147px;
+  margin-right: -187px;
+}
+
+.hito-robotics .overlap {
+  position: relative;
+  width: 1602px;
+  height: 149px;
+  top: -1px;
+  left: -1px;
+  background-color: #161c2d;
+}
+
+.hito-robotics .social {
+  position: absolute;
+  width: 332px;
+  height: 27px;
+  top: 57px;
+  left: 997px;
+}
+
+.hito-robotics .logo-twitter {
+  position: absolute;
+  width: 26px;
+  height: 22px;
+  top: 3px;
+  left: 0;
+}
+
+.hito-robotics .logo-facebook {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 0;
+  left: 100px;
+}
+
+.hito-robotics .logo-instagram {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 0;
+  left: 202px;
+  background-image: url(./img/shape.svg);
+  background-size: 100% 100%;
+}
+
+.hito-robotics .overlap-group {
+  position: relative;
+  width: 15px;
+  height: 16px;
+  top: 5px;
+  left: 7px;
+}
+
+.hito-robotics .shape {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 2px;
+  left: 0;
+}
+
+.hito-robotics .oval {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  top: 0;
+  left: 11px;
+  background-color: #7d818d;
+  border-radius: 1.84px;
+}
+
+.hito-robotics .logo-linkedin {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 0;
+  left: 304px;
+  background-image: url(./img/shape-2.svg);
+  background-size: 100% 100%;
+}
+
+.hito-robotics .company-name {
+  display: flex;
+  flex-direction: column;
+  width: 319px;
+  align-items: flex-start;
+  gap: 5px;
+  position: absolute;
+  top: 43px;
+  left: 132px;
+}
+
+.hito-robotics .text-wrapper {
+  position: relative;
+  align-self: stretch;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 28px;
+  letter-spacing: -0.16px;
+  line-height: normal;
+}
+
+.hito-robotics .slogan {
+  position: relative;
+  align-self: stretch;
+  opacity: 0.65;
+  font-family: "Rubik", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: -0.1px;
+  line-height: 26px;
+}
+
+.hito-robotics .contact {
+  position: absolute;
+  width: 502px;
+  height: 276px;
+  top: 1889px;
+  left: 448px;
+}
+
+.hito-robotics .overlap-2 {
+  position: absolute;
+  width: 502px;
+  height: 158px;
+  top: 118px;
+  left: 0;
+}
+
+.hito-robotics .form {
+  position: absolute;
+  width: 367px;
+  height: 52px;
+  top: 106px;
+  left: 70px;
+}
+
+.hito-robotics .disclaimer {
+  position: absolute;
+  width: 365px;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Rubik", Helvetica;
+  font-weight: 400;
+  color: #161c2d;
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  line-height: 26px;
+}
+
+.hito-robotics .title {
+  position: absolute;
+  width: 502px;
+  height: 132px;
+  top: 0;
+  left: 0;
+}
+
+.hito-robotics .text-wrapper-2 {
+  position: absolute;
+  width: 487px;
+  top: 0;
+  left: 0;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: -1.2px;
+  line-height: 48px;
+}
+
+.hito-robotics .icon {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  top: 0;
+  left: 213px;
+  background-color: #68d585;
+  border-radius: 39px;
+}
+
+.hito-robotics .email {
+  position: absolute;
+  width: 28px;
+  height: 23px;
+  top: 28px;
+  left: 25px;
+}
+
+.hito-robotics .about {
+  position: absolute;
+  width: 897px;
+  height: 768px;
+  top: 867px;
+  left: 280px;
+}
+
+.hito-robotics .content-right {
+  position: absolute;
+  width: 414px;
+  height: 391px;
+  top: 272px;
+  left: 484px;
+}
+
+.hito-robotics .element {
+  position: absolute;
+  width: 414px;
+  height: 98px;
+  top: 293px;
+  left: 0;
+  overflow: hidden;
+}
+
+.hito-robotics .get-interview-call {
+  position: absolute;
+  width: 223px;
+  top: 10px;
+  left: 67px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+
+.hito-robotics .oval-2 {
+  position: absolute;
+  width: 46px;
+  height: 44px;
+  top: 5px;
+  left: -1px;
+  background-color: #53666c;
+  border-radius: 23.01px/22.03px;
+}
+
+.hito-robotics .element-2 {
+  position: absolute;
+  width: 414px;
+  height: 98px;
+  top: 147px;
+  left: 0;
+  overflow: hidden;
+}
+
+.hito-robotics .apply-within-our-web {
+  position: absolute;
+  width: 251px;
+  top: 10px;
+  left: 67px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+
+.hito-robotics .element-3 {
+  position: absolute;
+  width: 414px;
+  height: 98px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.hito-robotics .search-for-a-job {
+  position: absolute;
+  width: 253px;
+  top: 10px;
+  left: 67px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  line-height: 32px;
+}
+
+.hito-robotics .image {
+  position: absolute;
+  width: 407px;
+  height: 562px;
+  top: 206px;
+  left: 0;
+}
+
+.hito-robotics .overlap-group-2 {
+  position: relative;
+  width: 442px;
+  height: 591px;
+  top: -3px;
+  left: -34px;
+}
+
+.hito-robotics .BG {
+  position: absolute;
+  width: 349px;
+  height: 503px;
+  top: 63px;
+  left: 93px;
+  background-color: #68d585;
+  border-radius: 10px;
+  opacity: 0.1;
+}
+
+.hito-robotics .IMG {
+  position: absolute;
+  width: 439px;
+  height: 591px;
+  top: 0;
+  left: 0;
+}
+
+.hito-robotics .title-2 {
+  position: absolute;
+  width: 514px;
+  height: 118px;
+  top: 0;
+  left: 162px;
+}
+
+.hito-robotics .description {
+  position: absolute;
+  width: 514px;
+  top: 60px;
+  left: 0;
+  opacity: 0.7;
+  font-family: "Rubik", Helvetica;
+  font-weight: 400;
+  color: #161c2d;
+  font-size: 19px;
+  text-align: center;
+  letter-spacing: -0.2px;
+  line-height: 32px;
+}
+
+.hito-robotics .text-wrapper-3 {
+  position: absolute;
+  width: 441px;
+  top: -6px;
+  left: 36px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: -1.2px;
+  line-height: 48px;
+}
+
+.hito-robotics .overlap-3 {
+  position: absolute;
+  width: 1398px;
+  height: 761px;
+  top: 0;
+  left: 0;
+}
+
+.hito-robotics .banner {
+  position: absolute;
+  width: 1398px;
+  height: 761px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/bg.png);
+  background-size: 100% 100%;
+}
+
+.hito-robotics .content {
+  position: relative;
+  width: 851px;
+  height: 463px;
+  top: 137px;
+  left: 184px;
+  background-color: #ffffff66;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.hito-robotics .p {
+  position: absolute;
+  width: 603px;
+  top: 177px;
+  left: 39px;
+  opacity: 0.7;
+  font-family: "Rubik", Helvetica;
+  font-weight: 400;
+  color: #161c2d;
+  font-size: 19px;
+  letter-spacing: -0.2px;
+  line-height: 32px;
+}
+
+.hito-robotics .slogan-2 {
+  position: absolute;
+  width: 851px;
+  top: 24px;
+  left: 30px;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 60px;
+  letter-spacing: -2px;
+  line-height: 65px;
+}
+
+.hito-robotics .header {
+  position: absolute;
+  width: 1312px;
+  height: 33px;
+  top: 21px;
+  left: 48px;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.hito-robotics .text-wrapper-4 {
+  position: absolute;
+  width: 212px;
+  top: 0;
+  left: 0;
+  font-family: "Rubik", Helvetica;
+  font-weight: 700;
+  color: #161c2d;
+  font-size: 28px;
+  letter-spacing: -0.16px;
+  line-height: normal;
+}
