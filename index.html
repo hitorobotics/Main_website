@@ -1,87 +1,303 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="hito-robotics">
-      <div class="div">
-        <div class="footer">
-          <div class="overlap-wrapper">
-            <div class="overlap">
-              <div class="social">
-                <img class="logo-twitter" src="img/logo-twitter.png" />
-                <img class="logo-facebook" src="img/logo-facebook.png" />
-                <div class="logo-instagram">
-                  <div class="overlap-group">
-                    <img class="shape" src="img/shape-1.svg" />
-                    <div class="oval"></div>
-                  </div>
-                </div>
-                <div class="logo-linkedin"></div>
-              </div>
-              <div class="company-name">
-                <div class="text-wrapper">Hito Robotics Inc.</div>
-                <div class="slogan">Dexterity and Manipulation Redefined</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="overlap-2">
-            <div class="form">
-              <p class="disclaimer">Email: info@hitorobotics.com<br />Phone: +91 99161 20264</p>
-            </div>
-            <div class="title"><div class="text-wrapper-2">Contact us</div></div>
-          </div>
-          <div class="icon"><img class="email" src="img/email-83.png" /></div>
-        </div>
-        <div class="about">
-          <div class="content-right">
-            <div class="element">
-              <div class="get-interview-call">Bio-inspired compute</div>
-              <div class="oval-2"></div>
-            </div>
-            <div class="element-2">
-              <div class="apply-within-our-web">Full hand Tactile sensing</div>
-              <div class="oval-2"></div>
-            </div>
-            <div class="element-3">
-              <div class="search-for-a-job">26 DOF Biomimetic Hand</div>
-              <div class="oval-2"></div>
-            </div>
-          </div>
-          <div class="image">
-            <div class="overlap-group-2">
-              <div class="BG"></div>
-              <img class="IMG" src="img/img.png" />
-            </div>
-          </div>
-          <div class="title-2">
-            <p class="description">
-              Revolutionising robotic hands with bio-inspired designs for human-like manipulation in unstructured
-              environments.
-            </p>
-            <div class="text-wrapper-3">Key Features</div>
-          </div>
-        </div>
-        <div class="overlap-3">
-          <div class="banner">
-            <div class="content">
-              <p class="p">
-                Revolutionising robotic hands with cutting-edge bio-inspired designs and advanced tactile sensors,
-                enabling versatile, human-like manipulation in unstructured environments. Featuring 26 degrees of
-                freedom and multiple tactile datapoints, our hands use AI to perform a wide range of tasks with
-                exceptional touch and dexterity, pushing the boundaries of robotics.
-              </p>
-              <div class="slogan-2">Dexterity and Manipulation Redefined</div>
-            </div>
-          </div>
-          <header class="header"><div class="text-wrapper-4">Hito Robotics Inc.</div></header>
-        </div>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="We build the world's most advanced bio-mimetic robotic hand.">
+    <title>Bio-mimetic Robotic Hand</title>
+    <style>
+        /* Blueprint grid background */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4181C9; /* Blueprint blue background */
+            color: #fff; /* White text color */
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent),
+                              linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.1) 25%, rgba(255, 255, 255, 0.1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1) 76%, transparent 77%, transparent);
+            background-size: 40px 40px; /* Grid size */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        /* Tab bar styling */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.25); /* 0.8 makes it translucent */
+            padding: 1rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-sizing: border-box; /* Ensure padding is inside the width */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin-right: 2rem; /* Add margin to keep items inside */
+            padding-right: 1rem; /* Prevent the last item from going too far */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0.5rem 1rem; /* Add padding for better spacing */
+        }
+
+        nav img {
+            height: 60px; /* Logo size */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        header {
+            text-align: center;
+            padding: 5rem 2rem 2rem;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent header */
+            margin-top: 60px; /* Push content below fixed nav bar */
+        }
+        section {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent sections */
+            margin: 2rem;
+            border-radius: 8px;
+        }
+        h1, h2 {
+            font-family: 'Courier New', Courier, monospace; /* Gives a technical feel */
+        }
+        .how-it-works {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .how-it-works div {
+            width: 45%;
+            margin-bottom: 2rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007bb5;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .contact-form input, .contact-form textarea::placeholder {
+            color: white;
+        }
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 5rem 2rem 2rem;
+            background-color: rgba(0, 0, 0, 0); /* Semi-transparent header */
+            margin-top: 60px; /* Push content below fixed nav bar */
+        }
+
+        .header-line {
+            font-size: 4rem;
+            line-height: 1.5;
+            margin: 1rem 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /* You can adjust font size for each specific line if needed */
+        .header-line:nth-child(4) {
+            font-size: 1.5rem; /* Make "Period." slightly smaller for emphasis */
+        }
+        /* Style for "How?" heading */
+        #about h2 {
+            font-size: 4rem; /* Make "How?" bigger */
+            text-align: center; /* Center align the heading */
+            margin-bottom: 2rem;
+        }
+
+        /* Add a background image to the content under "How?" */
+        .how-it-works {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 3rem; /* Add more padding to the left */
+            background-image: url('hand_2.png'); /* Replace with your image path */
+            background-size: cover; /* Adjust image to cover the entire container */
+            background-position: center;
+            padding: 3rem 0; /* Padding to give space around the text and background */
+        }
+
+        .how-it-works div {
+            width: 45%;
+            margin-bottom: 2rem;
+        }
+
+        .how-it-works p {
+            font-size: 1.2rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            margin-left: 1.5rem; /* Add more left padding for inner text */
+            background-color: rgba(255, 255, 255, 0.2); /* Add semi-transparent background behind text */
+            padding: 1rem; /* Padding around text for readability */
+            border-radius: 10px; /* Slight rounding for a softer look */
+        }
+        #join {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2rem; /* Adjust as needed */
+            line-height: 1.6;
+            color: #fff; /* Ensure readability with white text */
+        }
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+            text-align: center; /* Center the entire form */
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left; /* Ensure all labels are left-aligned with respect to the input fields */
+            margin: 0.5rem auto; /* Center with respect to the form */
+            width: 70%; /* Ensure the labels match the input field width */
+            max-width: 500px; /* Cap the width to avoid stretching */
+            font-family: 'Arial', sans-serif; /* Use consistent font for all labels */
+            font-size: 1rem; /* Ensure consistent font size */
+            color: white; /* Ensure color consistency */
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 70%; /* Keep input fields at 70% of the form's width */
+            max-width: 500px; /* Cap the width for larger screens */
+            padding: 0.5rem;
+            margin: 0.5rem auto; /* Center input fields */
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: block;
+        }
+
+        .contact-form input[type="submit"] {
+            width: 30%; /* Smaller submit button */
+            max-width: 200px;
+            background-color: #007bb5;
+            color: white;
+            cursor: pointer;
+            border: none;
+            margin: 1rem auto; /* Center the button as well */
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+<!-- Navigation bar -->
+<nav>
+    <div class="logo">
+        <img src="logo_white.png" alt="Company Logo"> <!-- Replace with actual logo image -->
     </div>
-  </body>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#join">Join Us</a></li>
+    </ul>
+</nav>
+
+<!-- Main content -->
+<header>
+    <div class="header-line">We build the world’s</div>
+    <div class="header-line">most advanced</div>
+    <div class="header-line">bio-mimetic robotic hand.</div>
+    <div class="header-line">Period.</div>
+</header>
+
+<section id="about">
+    <h2>How?</h2>
+    <div class="how-it-works">
+        <div>
+            <p>Hand with a sense of touch.</p>
+            <p>Gentle bones mimicking wrist joints.</p>
+            <p>Soft & agile, just like our human hand.</p>
+            <p>Fine motor control.</p>
+            <p>Soft software architecture for object manipulation.</p>
+        </div>
+        <div>
+            <p>Passive compliant joints in addition to 26 DoF.</p>
+            <p>Perfect thumb-up!</p>
+            <p>High frequency sensory response.</p>
+            <p>Slip detection.</p>
+            <p>LAM for object detection and gripping with the sense of touch.</p>
+        </div>
+    </div>
+</section>
+
+<section id="join">
+    <h2>Sounds Exciting?</h2>
+    <p>
+        Be a part of robotic revolution. Join hands on the founding team of Hilo.
+        We are in the process of assembling a 10-20 member world-class founding team and we are looking for top talent in the following disciplines:
+        Mechanical and technical design, controls, system integration, testing, power and motion control, business development, applications, robot participation, localization and mapping, motion planning, manipulation behavior coordination, etc.
+    </p>
+</section>
+
+<section class="contact-form">
+    <h2>Drop us a line!</h2>
+    <form action="https://formspree.io/f/2581945224066497672" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Your email">
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+
+        <input type="submit" value="Send">
+    </form>
+
+
+    <p>Email: info@hilorobotics.m</p>
+
+
+</section>
+
+<footer>
+    <p>&copy; 2024 Hilo Robotics</p>
+</footer>
+
+</body>
 </html>
