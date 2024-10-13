@@ -133,19 +133,19 @@
         }
 
         .header-line {
-            font-size: 4rem;
+            font-size: clamp(2rem, 4vw, 4rem); /* Scales between 2rem and 4rem based on viewport width */
             line-height: 1.5;
             margin: 1rem 0;
             font-family: 'Courier New', Courier, monospace;
         }
 
         /* You can adjust font size for each specific line if needed */
-        .header-line:nth-child(4) {
-            font-size: 1.5rem; /* Make "Period." slightly smaller for emphasis */
-        }
+        /*.header-line:nth-child(4) {
+            font-size: 4rem; /* Make "Period." slightly smaller for emphasis
+        }*/
         /* Style for "How?" heading */
         #about h2 {
-            font-size: 4rem; /* Make "How?" bigger */
+            font-size: clamp(3rem, 6vw, 4rem); /* Scales between 2rem and 4rem based on viewport width */
             text-align: center; /* Center align the heading */
             margin-bottom: 2rem;
         }
@@ -155,32 +155,38 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            padding-left: 3rem; /* Add more padding to the left */
-            background-image: url('hand_2.png'); /* Replace with your image path */
-            background-size: cover; /* Adjust image to cover the entire container */
+            padding-left: clamp(0rem, 2vw, 3rem); /* Dynamically adjust left padding */
+            padding-right: clamp(0rem, 2vw, 3rem); /* Dynamically adjust right padding */
+            background-image: url('hand_2.png');
+            background-size: cover;
             background-position: center;
-            padding: 3rem 0; /* Padding to give space around the text and background */
+            padding-top: 3rem;
+            padding-bottom: 3rem;
         }
 
         .how-it-works div {
             width: 45%;
             margin-bottom: 2rem;
+            padding-left: clamp(0rem, 1vw, 1rem); /* Dynamically adjust left padding */
+            padding-right: clamp(0rem, 1vw, 1rem); /* Dynamically adjust right padding */
         }
 
         .how-it-works p {
-            font-size: 1.2rem;
+            font-size: clamp(0.5rem, 3vw, 1.2rem);
             font-family: 'Courier New', Courier, monospace;
             line-height: 1.6;
-            margin-left: 1.5rem; /* Add more left padding for inner text */
+            margin-left: clamp(0rem, 1vw, 1.5rem); /* Add more left padding for inner text */
             background-color: rgba(255, 255, 255, 0.2); /* Add semi-transparent background behind text */
             padding: 1rem; /* Padding around text for readability */
             border-radius: 10px; /* Slight rounding for a softer look */
         }
         #join {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 1.2rem; /* Adjust as needed */
-            line-height: 1.6;
-            color: #fff; /* Ensure readability with white text */
+            font-size: clamp(1rem, 2vw, 1.2rem); /* Dynamically scale the font size */
+            line-height: 1.8;
+            color: #fff;
+            padding: clamp(0rem, 4vw, 1rem); /* Dynamically adjust padding */
+            text-align: center;
         }
         .contact-form {
             background-color: rgba(255, 255, 255, 0.2);
