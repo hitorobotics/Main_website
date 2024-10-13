@@ -55,7 +55,9 @@
         }
 
         nav img {
-            height: 60px; /* Logo size */
+        max-width: 100%; /* Allow the logo to scale down with the screen size */
+        height: auto; /* Maintain the aspect ratio */
+        width: clamp(50px, 10vw, 60px); /* Set the logo width to scale between 50px and 60px */
         }
         nav ul {
             list-style: none;
@@ -240,7 +242,7 @@
     </div>
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#join">Contacts</a></li>
+        <li><a href="#join">Join Us</a></li>
     </ul>
 </nav>
 
