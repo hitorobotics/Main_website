@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy — Hito Robotics</title>
+<meta name="description" content="How Hito Robotics handles the information you share through this website.">
+<link rel="canonical" href="https://hitorobotics.com/privacy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hito Robotics">
+<meta property="og:title" content="Privacy — Hito Robotics">
+<meta property="og:description" content="How Hito Robotics handles the information you share through this website.">
+<meta property="og:url" content="https://hitorobotics.com/privacy">
+<meta property="og:image" content="https://hitorobotics.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hito Robotics: expert care shouldn’t depend on distance.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0A0C0F">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/geist-mono-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Instrument Sans';font-style:normal;font-display:swap;font-weight:400 700;src:url('/assets/fonts/instrument-sans-latin-wght-normal.woff2') format('woff2-variations'),url('/assets/fonts/instrument-sans-latin-wght-normal.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-display:swap;font-weight:400 700;src:url('/assets/fonts/instrument-sans-latin-ext-wght-normal.woff2') format('woff2-variations'),url('/assets/fonts/instrument-sans-latin-ext-wght-normal.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Geist Mono';font-style:normal;font-display:swap;font-weight:400;src:url('/assets/fonts/geist-mono-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Geist Mono';font-style:normal;font-display:swap;font-weight:500;src:url('/assets/fonts/geist-mono-latin-500-normal.woff2') format('woff2')}
+</style>
+<style>
+body{margin:0;background:#0A0C0F}
+.site{--signal:#FF5B1F;font-family:'Instrument Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;font-kerning:normal}
+.site *,.site *::before,.site *::after{box-sizing:border-box}
+.site h1,.site h2,.site h3,.site p{margin:0}
+:where(.site a){color:inherit;text-decoration:none}
+:where(.site a:hover){color:inherit}
+.site button,.site input,.site textarea{font-family:inherit}
+.site ::selection{background:var(--signal);color:#0A0C0F}
+.site :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+.mono{font-family:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+.site .skip{position:absolute;left:16px;top:-64px;z-index:100;padding:12px 18px;border-radius:999px;background:var(--signal);color:#0A0C0F;font-size:15px;font-weight:500;transition:top .25s}
+.site .skip:focus{top:12px}
+.hdr{background:rgba(10,12,15,.82);border-bottom:1px solid rgba(236,238,240,.08);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px)}
+.navlink{position:relative;padding:10px 2px;color:#9AA3AD;transition:color .2s}
+.navlink:hover{color:#ECEEF0}
+.navlink::after{content:'';position:absolute;left:2px;right:2px;bottom:4px;height:1px;background:var(--signal);transform:scaleX(0);transform-origin:left;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.navlink:hover::after{transform:scaleX(1)}
+.nav-sep{width:1px;height:16px;background:rgba(236,238,240,.16)}
+.nav-links{display:flex}
+.nav-burger{display:none}
+@media (max-width:1100px){.nav-links{display:none}.nav-burger{display:inline-flex}}
+@media (max-width:520px){.site .nav-cta{display:none}}
+@keyframes hstep{from{transform:rotate(0deg)}to{transform:rotate(25.714deg)}}
+@keyframes hin{0%,30%{opacity:0}100%{opacity:1}}
+@keyframes hout{0%{opacity:1}70%,100%{opacity:0}}
+.hr-in{opacity:0}
+.logo .hring{transition:fill .4s}
+.logo:hover .hring{fill:var(--signal);animation:hstep 1.1s linear infinite}
+.logo:hover .hr-in{animation:hin 1.1s linear infinite}
+.logo:hover .hr-out{animation:hout 1.1s linear infinite}
+.nw{white-space:nowrap}
+.site p,.site li{text-wrap:pretty}
+.site h3,.site h4{text-wrap:balance}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:1px solid transparent;font-size:16px;font-weight:500;line-height:1;cursor:pointer;white-space:nowrap;transition:background-color .25s,color .25s,border-color .25s,transform .15s}
+.btn:active{transform:scale(.98)}
+.btn .arw{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-primary{background:var(--signal);color:#0A0C0F}
+.btn-primary:hover{background:#ECEEF0;color:#0A0C0F}
+.btn-ghost{background:transparent;color:#ECEEF0;border-color:rgba(236,238,240,.28)}
+.btn-ghost:hover{border-color:#ECEEF0;background:rgba(236,238,240,.04)}
+.btn[disabled]{cursor:progress}
+.spinner{display:none;width:14px;height:14px;border-radius:50%;border:2px solid rgba(10,12,15,.25);border-top-color:#0A0C0F;animation:spin .7s linear infinite}
+.is-sending .spinner{display:inline-block}
+.is-sending .arw{display:none}
+.chip{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:999px;border:1px solid rgba(236,238,240,.2);background:transparent;color:#C9D0D6;cursor:pointer;font-size:14px;font-weight:500;transition:background-color .25s,color .25s,border-color .25s}
+.chip:hover{border-color:rgba(236,238,240,.6);color:#ECEEF0}
+.chip[aria-pressed="true"]{background:#ECEEF0;color:#0A0C0F;border-color:#ECEEF0}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label,.flabel{font-family:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#9AA3AD}
+.field input,.field textarea{width:100%;min-height:48px;padding:12px 0;background:transparent;border:0;border-bottom:1px solid rgba(236,238,240,.22);border-radius:0;color:#ECEEF0;font-size:18px;line-height:1.4;outline:none;transition:border-color .25s}
+.field textarea{min-height:120px;max-height:320px;resize:none;field-sizing:content}
+.field input::placeholder,.field textarea::placeholder{color:#7D8792}
+.field input:hover,.field textarea:hover{border-color:rgba(236,238,240,.45)}
+.field input:focus,.field textarea:focus{border-color:var(--signal);box-shadow:0 1px 0 var(--signal)}
+.field input:focus-visible,.field textarea:focus-visible{outline:none}
+.field:focus-within label{color:#ECEEF0}
+.field.bad input,.field.bad textarea{border-color:#FF8A80}
+.field.bad label{color:#FF8A80}
+.ferr{min-height:18px;font-size:13px;line-height:1.4;color:#FF8A80}
+.ferr-box{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;border:1px solid rgba(255,138,128,.35);background:rgba(255,138,128,.07);font-size:15px;line-height:1.5;color:#ECEEF0}
+.ferr-box a{color:#FF8A80;text-decoration:underline;text-underline-offset:3px}
+.hp{position:absolute!important;left:-10000px!important;width:1px;height:1px;opacity:0;pointer-events:none}
+.plink{color:#C9D0D6;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(201,208,214,.4);transition:color .2s,text-decoration-color .2s}
+.plink:hover{color:#ECEEF0;text-decoration-color:var(--signal)}
+.drow{display:grid;grid-template-columns:110px minmax(0,1fr) auto;align-items:center;gap:16px;min-height:64px;padding:10px 0;border-top:1px solid rgba(10,12,15,.14)}
+.drow a{transition:color .2s}
+.drow a:hover{color:#B93A0B}
+.copy{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid rgba(10,12,15,.18);background:transparent;color:#545B63;font-size:12px;letter-spacing:.06em;cursor:pointer;transition:border-color .2s,color .2s,background-color .2s}
+.copy:hover{border-color:#0A0C0F;color:#0A0C0F}
+.copy.ok{border-color:#0A0C0F;background:#0A0C0F;color:#F1F2EF}
+.flink{color:#9AA3AD;transition:color .2s}
+.flink:hover{color:#ECEEF0}
+.quad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:900px){.quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.quad{grid-template-columns:minmax(0,1fr)}}
+.totop{display:inline-flex;align-items:center;gap:8px;color:#9AA3AD;transition:color .2s}
+.totop:hover{color:#ECEEF0}
+.totop svg{transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.totop:hover svg{transform:translateY(-3px)}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes wordup{from{transform:translateY(110%)}to{transform:none}}
+@keyframes ping{0%{transform:scale(1);opacity:.9}100%{transform:scale(3);opacity:0}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes wmrise{from{transform:translateY(35%);opacity:0}to{transform:none;opacity:1}}
+@keyframes hdr{from{background-color:rgba(10,12,15,.25);border-bottom-color:rgba(236,238,240,0)}to{background-color:rgba(10,12,15,.82);border-bottom-color:rgba(236,238,240,.08)}}
+.rise{animation:rise 1s cubic-bezier(.2,.7,.2,1) both}
+.d2{animation-delay:.5s}.d3{animation-delay:.65s}
+.wd{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .06em .14em 0;margin:0 -.06em -.14em 0}
+.wd>span{display:inline-block;animation:wordup 1.1s cubic-bezier(.2,.75,.15,1) both}
+.ping{transform-box:fill-box;transform-origin:center;animation:ping 2.2s cubic-bezier(.2,.7,.2,1) infinite}
+.ok-ring{stroke-dasharray:1;animation:draw .8s cubic-bezier(.55,.05,.25,1) both}
+.ok-tick{stroke-dasharray:1;animation:draw .5s cubic-bezier(.55,.05,.25,1) .65s both}
+.ok-in{animation:rise .8s cubic-bezier(.2,.7,.2,1) .3s both}
+@supports (animation-timeline: scroll()){
+.hdr{animation:hdr linear both;animation-timeline:scroll(root);animation-range:0 240px}
+}
+@supports (animation-timeline: view()){
+.wm{animation:wmrise linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+}
+@media (prefers-reduced-motion:reduce){.site *,.site *::before,.site *::after{animation:none!important;transition:none!important}}
+.site.still *,.site.still *::before,.site.still *::after{animation:none!important}
+.pv-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px 96px;align-items:start}
+.pv-intro{position:sticky;top:120px;display:flex;flex-direction:column}
+@media (max-width:960px){.pv-grid{grid-template-columns:minmax(0,1fr)}.pv-intro{position:static}}
+.pv{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 12px;padding:28px 0;border-top:1px solid rgba(10,12,15,.14)}
+.pv:last-child{border-bottom:1px solid rgba(10,12,15,.14)}
+.pv .n{grid-row:1/span 2;padding-top:6px;font-size:12px;color:#B93A0B}
+.pv h2{font-size:22px;font-weight:500;letter-spacing:-0.015em;line-height:1.25}
+.pv p{font-size:17px;line-height:1.6;color:#545B63;text-wrap:pretty}
+.pv p+p{margin-top:10px}
+.pv a{color:#0A0C0F;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--signal);transition:color .2s}
+.pv a:hover{color:#B93A0B}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<noscript><div style="max-width:640px;margin:0 auto;padding:96px 24px;font:17px/1.6 'Instrument Sans',system-ui,sans-serif;color:#ECEEF0">
+<p style="font-size:28px;font-weight:600;margin:0 0 16px">Hito Robotics</p>
+<p>Teleoperated robotics for endovascular care. This site uses JavaScript for its interactive diagrams.</p>
+<p>Write to us at <a style="color:#FF5B1F" href="mailto:hello@hitorobotics.in">hello@hitorobotics.in</a>.</p>
+</div></noscript>
+<template id="app-tpl">
+<div class="{{ siteCls }}" style="--signal: {{ accent }}; background: #0A0C0F; color: #ECEEF0; min-height: 100vh">
+<a class="skip" href="#privacy-top">Skip to content</a>
+
+<header class="hdr" style="position: sticky; top: 0; z-index: 50; color: #ECEEF0">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 56px); height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="/" class="logo" aria-label="Hito Robotics home" style="display: flex; align-items: center; gap: 12px">
+<svg viewBox="40 40 1120 1120" width="32" height="32" aria-hidden="true" style="display: block; fill: currentColor"><g transform="matrix(1.1287059,0,0,1.1287059,-86.817568,-85.124509)"><g transform="translate(608.8 584.9)"><g class="hring"><rect class="hr-in" x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(192.86)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(218.57)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(244.29)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(270.00)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(295.71)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(321.43)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(347.14)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(12.86)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(38.57)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(64.29)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(90.00)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(115.71)"></rect><rect class="hr-out" x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(141.43)"></rect></g></g><path transform="translate(312,428)" d="m 0,0 h 15 l 40,7 58,11 88,16 31,4 22,2 22,1 h 48 l 45,-4 36,-5 147,-27 29,-5 h 13 l 11,4 9,6 7,9 4,11 v 16 l -4,10 -6,8 -7,6 -11,5 -29,6 -76,14 -68,13 -30,6 -1,7 -3,102 v 25 l 2,42 5,46 7,41 9,39 39,156 11,45 v 18 l -4,11 -5,8 -5,6 -9,6 -10,4 h -17 l -12,-4 -10,-7 -6,-8 -5,-11 -7,-26 -66,-264 -4,-10 -4,-2 h -6 l -4,1 -3,10 -32,128 -20,79 -19,76 -6,16 -7,10 -8,6 -12,5 -5,1 h -9 l -12,-3 -10,-6 -7,-7 -7,-13 -2,-8 v -12 l 6,-26 28,-112 18,-71 8,-35 6,-35 4,-33 3,-39 v -71 l -2,-65 -1,-21 -13,-3 L 63,87 -1,75 -14,70 -24,61 -30,51 -32,43 V 32 l 3,-10 6,-9 7,-6 12,-6 z"></path><path transform="translate(605,276)" d="m 0,0 h 11 l 16,3 13,5 14,8 10,9 8,9 8,13 6,15 3,14 v 16 l -3,16 -5,13 -6,11 -7,9 -10,10 -14,9 -8,4 -17,5 -7,1 H -3 l -16,-3 -16,-6 -11,-7 -12,-10 -10,-13 -8,-16 -4,-16 -1,-7 V 78 l 3,-16 5,-13 6,-11 7,-9 9,-9 11,-8 12,-6 13,-4 z"></path></g></svg>
+<span style="font-size: 18px; letter-spacing: -0.01em; white-space: nowrap"><span style="font-weight: 600">Hito</span> <span style="font-weight: 400; color: #9AA3AD">Robotics</span></span>
+</a>
+<nav class="nav-links" aria-label="Primary" style="align-items: center; gap: 26px; font-size: 15px">
+<a class="navlink" href="/#problem">Problem</a>
+<a class="navlink" href="/#procedure">Procedure</a>
+<a class="navlink" href="/#skill">Skill</a>
+<a class="navlink" href="/#technology">Technology</a>
+<a class="navlink" href="/#vision">Vision</a>
+<span class="nav-sep" aria-hidden="true"></span>
+<a class="navlink" href="/careers">Careers</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 10px">
+<a class="btn btn-primary nav-cta" href="/contact" style="min-height: 44px; padding: 0 18px; font-size: 15px">Get in touch</a>
+<button type="button" class="nav-burger" onClick="{{ toggleMenu }}" aria-expanded="{{ menuOpen }}" aria-label="{{ menuLabel }}" style="width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 12px; background: transparent; border: 1px solid rgba(236,238,240,.2); color: #ECEEF0; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round"><path d="M2 6 H16"></path><path d="M2 12 H16"></path></svg>
+</button>
+</div>
+</div>
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<nav aria-label="Mobile" style="border-top: 1px solid rgba(236,238,240,.08); padding: 8px clamp(20px, 4.5vw, 56px) 24px; display: flex; flex-direction: column">
+<a href="/" style="padding: 14px 0; font-size: 20px; border-bottom: 1px solid rgba(236,238,240,.08)">The story</a>
+<a href="/careers" style="padding: 14px 0; font-size: 20px; border-bottom: 1px solid rgba(236,238,240,.08)">Careers</a>
+</nav>
+</sc-if>
+</header>
+
+<section id="privacy-top" style="background: #F1F2EF; color: #0A0C0F; padding: clamp(64px, 8vw, 112px) 0">
+<div class="pv-grid" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 56px)">
+<div class="pv-intro">
+<div class="mono rise" style="display: flex; align-items: center; gap: 14px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #545B63"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle class="ping" cx="8" cy="8" r="3" style="fill: none; stroke: var(--signal); stroke-width: 1"></circle><circle cx="8" cy="8" r="3" style="fill: var(--signal)"></circle></svg>Privacy</div>
+<h1 style="margin-top: 28px; font-size: clamp(40px, 4.4vw, 64px); font-weight: 500; line-height: .96; letter-spacing: -0.045em; text-wrap: balance"><span class="wd"><span style="animation-delay: .1s">Privacy</span></span> <span class="wd"><span style="animation-delay: .16s; color: #B93A0B">notice.</span></span></h1>
+<p class="rise d2" style="margin-top: 28px; max-width: 460px; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.55; color: #545B63; text-wrap: pretty">How Hito Robotics handles what you share with us through this website. In short: we collect only what you send us, we use it to reply, and we don’t track you.</p>
+<div class="mono rise d3" style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #545B63"><span>Last updated</span><span style="color: #0A0C0F">29 October 2026</span></div>
+</div>
+<div class="rise d2">
+<section class="pv"><span class="mono n">01</span><h2>Who we are</h2><div><p>This website is run by Hito Robotics Private Limited (“Hito”, “we”), based in Delhi, India. If you have a question about this notice or about your information, write to <a href="mailto:privacy@hitorobotics.in">privacy@hitorobotics.in</a>.</p></div></section>
+<section class="pv"><span class="mono n">02</span><h2>What we collect</h2><div><p>Only what you choose to send us. If you use the contact form, that’s your name, email address, organization (if you add one), the kind of enquiry you pick and your message. If you email us, it’s your email address and whatever your email contains.</p><p>Please don’t include health or patient information. We don’t need it to reply.</p></div></section>
+<section class="pv"><span class="mono n">03</span><h2>What we don’t collect</h2><div><p>This website doesn’t use cookies, analytics or advertising trackers, and its fonts and images are served from the site itself. Our host, GitHub Pages, may record technical details such as IP addresses in its server logs to keep the service secure; see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub’s privacy statement</a>.</p><p>Links to LinkedIn or to research papers take you to other websites, which have their own privacy policies.</p></div></section>
+<section class="pv"><span class="mono n">04</span><h2>How we use it</h2><div><p>To read and answer your message, pass it to the right person on our team, and keep a record of our conversation. We don’t sell your information, share it for advertising, or add you to a mailing list.</p></div></section>
+<section class="pv"><span class="mono n">05</span><h2>Who else handles it</h2><div><p>Messages from the contact form go through FormSubmit (formsubmit.co), a service that turns form submissions into emails and delivers them to our inbox. Our email provider stores our correspondence. These services may process information outside India.</p></div></section>
+<section class="pv"><span class="mono n">06</span><h2>How long we keep it</h2><div><p>As long as we need it to reply, follow up and keep reasonable records of our conversations. We delete it when it’s no longer needed, or sooner if you ask.</p></div></section>
+<section class="pv"><span class="mono n">07</span><h2>Your rights</h2><div><p>You can ask to see the information you’ve shared with us, have it corrected or deleted, or withdraw your consent to us keeping it. Write to <a href="mailto:privacy@hitorobotics.in">privacy@hitorobotics.in</a> and we’ll respond as soon as we can.</p><p>If you have a complaint, raise it with us at the same address first. Under India’s Digital Personal Data Protection Act, 2023, you may also be able to take it to the Data Protection Board of India.</p></div></section>
+<section class="pv"><span class="mono n">08</span><h2>Changes to this notice</h2><div><p>If we change how we handle information, we’ll update this page and the date at the top.</p></div></section>
+</div>
+</div>
+</section>
+
+<footer style="background: #0A0C0F; color: #ECEEF0; border-top: 1px solid rgba(236,238,240,.08); padding: 64px 0 36px; overflow: hidden">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 4.5vw, 56px)">
+<div class="quad" style="gap: 40px 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-size: 18px"><span style="font-weight: 600">Hito</span> <span style="color: #9AA3AD">Robotics</span></span>
+<span style="font-size: 15px; line-height: 1.5; color: #9AA3AD; max-width: 240px">Teleoperated robotics for endovascular care.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792; margin-bottom: 4px">The story</span>
+<a class="flink" href="/#problem">The access gap</a>
+<a class="flink" href="/#procedure">How treatment travels</a>
+<a class="flink" href="/#skill">Why expertise is rare</a>
+<a class="flink" href="/#technology">Technology</a>
+<a class="flink" href="/#vision">Vision</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792; margin-bottom: 4px">Company</span>
+<a class="flink" href="/careers">Careers</a>
+<a class="flink" href="/contact">Contact</a>
+<a class="flink" href="/privacy">Privacy</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792; margin-bottom: 4px">Reach us</span>
+<a class="flink" href="mailto:hello@hitorobotics.in">hello@hitorobotics.in</a>
+<a class="flink" href="https://www.linkedin.com/company/hito-robotics/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px">LinkedIn<svg width="11" height="11" viewBox="0 0 12 12" aria-hidden="true" style="flex: none; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M3.5 8.5 L8.5 3.5"></path><path d="M4.5 3.5 H8.5 V7.5"></path></svg></a>
+<span style="color: #9AA3AD">Delhi, India</span>
+</div>
+</div>
+<div class="wm" aria-hidden="true" style="margin-top: 64px; display: flex; align-items: center; gap: .14em; font-size: clamp(48px, 11vw, 158px); font-weight: 600; line-height: .8; letter-spacing: -0.06em; color: #161B21; white-space: nowrap">
+<svg viewBox="40 40 1120 1120" aria-hidden="true" style="flex: none; width: .86em; height: .86em; fill: currentColor"><g transform="matrix(1.1287059,0,0,1.1287059,-86.817568,-85.124509)"><g transform="translate(608.8 584.9)"><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(218.57)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(244.29)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(270.00)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(295.71)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(321.43)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(347.14)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(12.86)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(38.57)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(64.29)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(90.00)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(115.71)"></rect><rect x="-64.85" y="-472.95" width="129.7" height="51.5" rx="25.75" transform="rotate(141.43)"></rect></g><path transform="translate(312,428)" d="m 0,0 h 15 l 40,7 58,11 88,16 31,4 22,2 22,1 h 48 l 45,-4 36,-5 147,-27 29,-5 h 13 l 11,4 9,6 7,9 4,11 v 16 l -4,10 -6,8 -7,6 -11,5 -29,6 -76,14 -68,13 -30,6 -1,7 -3,102 v 25 l 2,42 5,46 7,41 9,39 39,156 11,45 v 18 l -4,11 -5,8 -5,6 -9,6 -10,4 h -17 l -12,-4 -10,-7 -6,-8 -5,-11 -7,-26 -66,-264 -4,-10 -4,-2 h -6 l -4,1 -3,10 -32,128 -20,79 -19,76 -6,16 -7,10 -8,6 -12,5 -5,1 h -9 l -12,-3 -10,-6 -7,-7 -7,-13 -2,-8 v -12 l 6,-26 28,-112 18,-71 8,-35 6,-35 4,-33 3,-39 v -71 l -2,-65 -1,-21 -13,-3 L 63,87 -1,75 -14,70 -24,61 -30,51 -32,43 V 32 l 3,-10 6,-9 7,-6 12,-6 z"></path><path transform="translate(605,276)" d="m 0,0 h 11 l 16,3 13,5 14,8 10,9 8,9 8,13 6,15 3,14 v 16 l -3,16 -5,13 -6,11 -7,9 -10,10 -14,9 -8,4 -17,5 -7,1 H -3 l -16,-3 -16,-6 -11,-7 -12,-10 -10,-13 -8,-16 -4,-16 -1,-7 V 78 l 3,-16 5,-13 6,-11 7,-9 9,-9 11,-8 12,-6 13,-4 z"></path></g></svg>
+<span>Hito Robotics</span>
+</div>
+<div class="mono" style="margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(236,238,240,.08); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 24px; font-size: 11px; letter-spacing: .04em; color: #7D8792">
+<span>© 2026 Hito Robotics Private Limited</span>
+<span>Illustrations are conceptual and not to scale.</span>
+<a class="totop" href="#privacy-top">Back to top<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"><path d="M6 10 V2"></path><path d="M2.5 5.5 L6 2 L9.5 5.5"></path></svg></a>
+</div>
+</div>
+</footer>
+</div>
+</template>
+<script src="/assets/hito-runtime.js"></script>
+<script>
+(function () {
+var DCLogic = window.DCLogic;
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: false };
+    this.toggleMenu = () => this.setState({ menu: !this.state.menu });
+  }
+  renderVals() {
+    const motion = this.props.motion ?? true;
+    return {
+      accent: this.props.accent ?? '#FF5B1F',
+      siteCls: motion ? 'site' : 'site still',
+      menuOpen: this.state.menu,
+      menuLabel: this.state.menu ? 'Close menu' : 'Open menu',
+      toggleMenu: this.toggleMenu
+    };
+  }
+}
+window.HitoApp.mount(Component, {"accent": "#FF5B1F", "motion": true});
+})();
+</script>
+</body>
+</html>
