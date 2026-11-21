@@ -38,7 +38,6 @@ html{scroll-behavior:smooth}
 :where(.site a:hover){color:inherit}
 .site button{font-family:inherit}
 .site sup{font-size:.6em;line-height:0;vertical-align:super}
-.site kbd{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border-radius:6px;border:1px solid rgba(236,238,240,.22);border-bottom-width:2px;font-family:'Geist Mono',ui-monospace,monospace;font-size:11px;color:#C9D0D6}
 .site ::selection{background:var(--signal);color:#0A0C0F}
 .site :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 .site section[id]{scroll-margin-top:72px}
@@ -105,7 +104,6 @@ html{scroll-behavior:smooth}
 @media (max-width:700px){.tocs{grid-template-columns:minmax(0,1fr);gap:0}.tocs .toc{flex-direction:row;align-items:baseline;gap:14px;padding:14px 0}.tocs .toc .tz{display:none}}
 .tri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:960px){.tri{grid-template-columns:minmax(0,1fr)}}
-@media (min-width:760px) and (max-width:960px){.tri.tri-tight{grid-template-columns:repeat(3,minmax(0,1fr))}.tri-tight>div{padding:18px!important}}
 .quad{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:900px){.quad{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:480px){.quad{grid-template-columns:minmax(0,1fr)}}
@@ -140,14 +138,7 @@ html{scroll-behavior:smooth}
 @keyframes travel{0%{left:0;opacity:0}12%,88%{opacity:1}100%{left:calc(100% - 6px);opacity:0}}
 @keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.8)}100%{transform:scale(1)}}
 @keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.22)}24%{transform:scale(1)}36%{transform:scale(1.12)}50%{transform:scale(1)}}
-@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(3px)}60%{transform:translateX(-3px)}80%{transform:translateX(1.5px)}}
-@keyframes shake2{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(3px)}60%{transform:translateX(-3px)}80%{transform:translateX(1.5px)}}
-@keyframes flash{0%{stroke-opacity:0}30%{stroke-opacity:.55}100%{stroke-opacity:0}}
-@keyframes flash2{0%{stroke-opacity:0}30%{stroke-opacity:.55}100%{stroke-opacity:0}}
-@keyframes contrast{0%{opacity:0}25%{opacity:.5}100%{opacity:.14}}
 @keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-@keyframes push{0%,100%{transform:translateX(-16px)}50%{transform:translateX(16px)}}
-@keyframes spin{to{transform:rotate(360deg)}}
 @keyframes ripple{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.15);opacity:0}}
 @keyframes wmrise{from{transform:translateY(35%);opacity:0}to{transform:none;opacity:1}}
 @keyframes lane{0%{left:0;opacity:0}15%,85%{opacity:1}100%{left:calc(100% - 6px);opacity:0}}
@@ -226,32 +217,6 @@ html{scroll-behavior:smooth}
 .fg .fgd{stroke-dasharray:1}
 .fg:hover .fgd{animation:draw .9s cubic-bezier(.55,.05,.25,1) both}
 
-.sim-wire{fill:none;stroke:var(--signal);stroke-width:3;stroke-linecap:round;stroke-dasharray:1000;transition:stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)}
-.sim-glow{fill:none;stroke:var(--signal);stroke-opacity:.2;stroke-width:9;stroke-linecap:round;stroke-dasharray:1000;transition:stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)}
-.sim-cath{fill:none;stroke:#C9D1D9;stroke-opacity:.26;stroke-width:10;stroke-linecap:round;stroke-dasharray:1000;transition:stroke-dashoffset .6s cubic-bezier(.4,0,.2,1)}
-.sim-tip{transition:transform .6s cubic-bezier(.4,0,.2,1)}
-.shk-a{animation:shake .42s cubic-bezier(.36,.07,.19,.97) both}
-.shk-b{animation:shake2 .42s cubic-bezier(.36,.07,.19,.97) both}
-.wfl{fill:none;stroke:var(--signal);stroke-width:22;stroke-linecap:round;stroke-opacity:0}
-.wfl.fl-a{animation:flash .8s ease-out both}
-.wfl.fl-b{animation:flash2 .8s ease-out both}
-.bloom-l{fill:none;stroke:var(--signal);stroke-width:30;stroke-linecap:round;opacity:0}
-.sim.is-done .bloom-l{animation:contrast 2.6s ease-out forwards}
-.simview{border-radius:16px}
-.simview:focus-visible{outline:2px solid var(--signal);outline-offset:-2px}
-.ck{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7D8792;transition:color .3s}
-.ck .ck-ring{fill:none;stroke:#4A535D;stroke-width:1.4;transition:stroke .3s,fill .3s}
-.ck .ck-tick{fill:none;stroke:#0A0C0F;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .35s .1s}
-.ck.ok{color:#ECEEF0}
-.ck.ok .ck-ring{stroke:var(--signal);fill:var(--signal)}
-.ck.ok .ck-tick{stroke-dashoffset:0}
-.ctl{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border-radius:12px;background:#1B2128;border:1px solid rgba(236,238,240,.12);color:#ECEEF0;font-size:15px;font-weight:500;cursor:pointer;transition:background-color .2s,border-color .2s,transform .1s}
-.ctl:hover{background:#232A33;border-color:rgba(236,238,240,.3)}
-.ctl:active{transform:translateY(1px)}
-.ctl[disabled]{opacity:.35;cursor:not-allowed}
-.ctl-primary{background:var(--signal);color:#0A0C0F;border-color:transparent}
-.ctl-primary:hover{background:#ECEEF0}
-@media (hover:none){.kbd-hint{display:none}}
 
 .spot{position:relative;isolation:isolate}
 .spot::before{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(380px circle at var(--mx,50%) var(--my,0%),rgba(236,238,240,.075),transparent 50%);opacity:0;transition:opacity .4s;pointer-events:none;z-index:-1}
@@ -268,10 +233,6 @@ html{scroll-behavior:smooth}
 .io{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:6px 14px;margin-top:auto;padding-top:16px;border-top:1px dashed rgba(236,238,240,.14);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7D8792}
 .io b{font-weight:500;color:#C9D0D6}
 .io svg{display:block}
-.g-push{animation:push 3s cubic-bezier(.6,0,.4,1) infinite}
-.g-spin{transform-box:view-box;transform-origin:140px 60px;animation:spin 3.6s cubic-bezier(.6,0,.4,1) infinite}
-.g-a{animation:push 2.8s cubic-bezier(.6,0,.4,1) infinite}
-.g-b{animation:push 2.8s cubic-bezier(.6,0,.4,1) -1.4s infinite}
 
 .stmt{view-timeline-name:--stmt}
 .hline{position:relative;flex:1;height:1px;margin:0 -32px 0 16px;background:rgba(10,12,15,.16)}
@@ -631,7 +592,7 @@ html{scroll-behavior:smooth}
 <nav aria-label="Chapters" class="tocs">
 <a class="toc" href="#problem"><span class="mono" style="font-size: 12px; color: var(--signal)">01</span><span style="font-size: 16px; font-weight: 500">The access gap</span><span class="tz">Why location decides care</span></a>
 <a class="toc" href="#procedure"><span class="mono" style="font-size: 12px; color: var(--signal)">02</span><span style="font-size: 16px; font-weight: 500">How treatment travels</span><span class="tz">A road through the arteries</span></a>
-<a class="toc" href="#skill"><span class="mono" style="font-size: 12px; color: var(--signal)">03</span><span style="font-size: 16px; font-weight: 500">Why expertise is rare</span><span class="tz">Try steering a guidewire</span></a>
+<a class="toc" href="#skill"><span class="mono" style="font-size: 12px; color: var(--signal)">03</span><span style="font-size: 16px; font-weight: 500">Why expertise is rare</span><span class="tz">A craft of millimeters</span></a>
 <a class="toc" href="#technology"><span class="mono" style="font-size: 12px; color: var(--signal)">04</span><span style="font-size: 16px; font-weight: 500">Bridging the distance</span><span class="tz">How teleoperation works</span></a>
 <a class="toc" href="#vision"><span class="mono" style="font-size: 12px; color: var(--signal)">05</span><span style="font-size: 16px; font-weight: 500">Where we’re headed</span><span class="tz">Expert care, within reach</span></a>
 </nav>
@@ -1137,79 +1098,6 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div>
-
-<div class="rv spot" onPointerMove="{{ spot }}" onKeyDown="{{ simKey }}" style="margin-top: 80px; background: #0A0C0F; color: #ECEEF0; border-radius: 24px; overflow: hidden">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; padding: 20px clamp(20px, 3vw, 32px); border-bottom: 1px solid rgba(236,238,240,.08)">
-<div class="mono" style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #9AA3AD">Fig. 03&nbsp;— Try it: steer a guidewire</div>
-<div class="mono" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #9AA3AD"><span>Tip · <span style="color: #ECEEF0">{{ tipLabel }}</span></span><span>Position · <span style="color: #ECEEF0">{{ posLabel }}</span></span><span>Moves · <span style="color: #ECEEF0">{{ moves }}</span></span></div>
-</div>
-<div class="simview" tabindex="0" aria-label="Guidewire simulation. Use the arrow keys to advance or pull back, and R to rotate the tip." style="padding: 0">
-<svg viewBox="-40 0 816 320" class="sim {{ simCls }}" role="img" aria-label="A vessel splits into an upper branch that narrows and a lower branch that holds the target." style="width: 100%; height: auto; display: block">
-<defs>
-<pattern id="simgrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0 L0 0 0 24" style="fill: none; stroke: rgba(236,238,240,.045); stroke-width: 1"></path></pattern>
-<radialGradient id="simVig" cx="50%" cy="50%" r="75%"><stop offset=".55" style="stop-color: #0A0C0F; stop-opacity: 0"></stop><stop offset="1" style="stop-color: #0A0C0F; stop-opacity: .75"></stop></radialGradient>
-</defs>
-<rect x="-40" width="816" height="320" style="fill: url(#simgrid)"></rect>
-<g style="fill: none; stroke: #2C343D; stroke-linecap: round">
-<path d="M-80 160 L300 160" style="stroke-width: 50"></path>
-<path d="M300.0 185.0 L303.2 184.9 L306.3 184.8 L309.5 184.5 L312.6 184.2 L315.6 183.8 L318.7 183.3 L321.7 182.7 L324.7 182.0 L327.7 181.3 L330.6 180.5 L333.5 179.6 L336.4 178.7 L339.3 177.8 L342.1 176.8 L345.0 175.7 L347.8 174.6 L350.6 173.5 L353.4 172.3 L356.2 171.1 L359.0 169.9 L361.8 168.6 L364.6 167.4 L367.4 166.1 L370.2 164.8 L373.0 163.5 L375.9 162.2 L378.8 160.9 L381.7 159.6 L384.6 158.3 L387.6 157.0 L390.7 155.8 L393.7 154.5 L396.8 153.3 L400.0 152.0 L403.1 150.7 L406.4 149.5 L409.6 148.2 L412.9 146.8 L416.2 145.4 L419.6 144.0 L423.0 142.6 L426.4 141.1 L429.9 139.6 L433.4 138.1 L437.0 136.5 L440.6 135.0 L444.3 133.4 L448.2 131.7 L448.9 131.4 L449.6 131.1 L450.3 130.8 L451.0 130.5 L451.7 130.1 L452.4 129.8 L453.1 129.5 L453.8 129.2 L454.5 128.9 L455.2 128.6 L455.9 128.3 L456.7 128.0 L457.4 127.6 L458.1 127.3 L458.8 127.0 L459.6 126.7 L460.3 126.4 L461.0 126.1 L461.8 125.8 L462.5 125.4 L463.2 125.1 L464.0 124.8 L464.7 124.5 L465.5 124.2 L466.2 123.9 L467.0 123.5 L467.7 123.2 L468.5 122.9 L469.3 122.6 L470.0 122.3 L470.8 121.9 L471.6 121.6 L472.3 121.3 L473.1 121.0 L473.9 120.7 L474.7 120.3 L475.5 120.0 L476.2 119.7 L477.0 119.4 L477.8 119.0 L478.6 118.7 L479.4 118.4 L480.2 118.1 L481.0 117.8 L481.8 117.4 L482.6 117.1 L483.4 116.8 L484.3 116.5 L487.5 115.2 L490.7 114.0 L493.9 112.7 L497.2 111.5 L500.6 110.2 L504.0 109.0 L507.5 107.8 L511.0 106.6 L514.5 105.4 L518.1 104.2 L521.8 103.1 L525.5 101.9 L529.3 100.8 L533.1 99.7 L537.0 98.7 L541.0 97.6 L545.0 96.7 L549.1 95.7 L553.2 94.8 L557.4 93.9 L561.7 93.1 L566.0 92.4 L570.4 91.7 L574.8 91.0 L579.3 90.3 L583.9 89.6 L588.5 89.0 L593.2 88.4 L597.9 87.8 L602.7 87.2 L607.6 86.6 L612.5 86.0 L617.5 85.5 L622.5 85.0 L627.6 84.5 L632.8 84.0 L638.1 83.5 L643.4 83.1 L648.7 82.7 L654.2 82.3 L659.7 81.9 L665.3 81.6 L670.9 81.2 L676.7 80.9 L682.4 80.7 L688.3 80.4 L694.2 80.2 L700.2 80.0 L715.2 79.6 L730.2 79.2 L745.2 78.9 L760.2 78.5 L775.2 78.1 L790.2 77.7 L805.2 77.4 L820.2 77.0 L819.8 61.0 L804.8 61.4 L789.8 61.8 L774.8 62.1 L759.8 62.5 L744.8 62.9 L729.8 63.3 L714.8 63.6 L699.8 64.0 L693.7 64.2 L687.7 64.4 L681.7 64.7 L675.9 65.0 L670.1 65.3 L664.3 65.6 L658.7 65.9 L653.1 66.3 L647.6 66.7 L642.1 67.1 L636.7 67.6 L631.4 68.1 L626.1 68.5 L620.9 69.0 L615.8 69.6 L610.7 70.1 L605.7 70.7 L600.8 71.3 L595.9 71.9 L591.1 72.5 L586.3 73.1 L581.6 73.8 L577.0 74.5 L572.4 75.2 L567.9 75.9 L563.4 76.6 L559.0 77.3 L554.6 78.0 L550.3 78.7 L546.0 79.3 L541.8 79.9 L537.6 80.5 L533.5 81.1 L529.4 81.7 L525.3 82.3 L521.3 82.9 L517.4 83.5 L513.5 84.1 L509.6 84.6 L505.8 85.2 L502.0 85.8 L498.3 86.4 L494.6 87.0 L490.9 87.6 L487.3 88.2 L483.7 88.9 L480.2 89.5 L476.7 90.1 L475.9 90.3 L475.0 90.5 L474.1 90.6 L473.2 90.8 L472.3 91.0 L471.4 91.1 L470.5 91.3 L469.6 91.5 L468.8 91.7 L467.9 91.8 L467.0 92.0 L466.2 92.2 L465.3 92.4 L464.4 92.5 L463.6 92.7 L462.7 92.9 L461.8 93.1 L461.0 93.3 L460.1 93.5 L459.3 93.7 L458.4 93.8 L457.6 94.0 L456.8 94.2 L455.9 94.4 L455.1 94.6 L454.3 94.8 L453.4 95.0 L452.6 95.2 L451.8 95.4 L450.9 95.6 L450.1 95.8 L449.3 96.0 L448.5 96.2 L447.7 96.4 L446.9 96.6 L446.1 96.8 L445.3 97.0 L444.5 97.2 L443.7 97.4 L442.9 97.6 L442.1 97.8 L441.3 98.0 L440.5 98.2 L439.7 98.5 L438.9 98.7 L438.1 98.9 L437.4 99.1 L436.6 99.3 L432.6 100.4 L428.6 101.6 L424.6 102.8 L420.7 104.0 L416.9 105.2 L413.2 106.4 L409.5 107.7 L405.9 109.0 L402.4 110.3 L398.9 111.6 L395.6 112.9 L392.2 114.2 L389.0 115.5 L385.8 116.8 L382.6 118.0 L379.6 119.3 L376.5 120.5 L373.5 121.6 L370.5 122.7 L367.6 123.8 L364.7 124.7 L361.8 125.7 L359.0 126.5 L356.2 127.4 L353.5 128.1 L350.8 128.8 L348.1 129.5 L345.5 130.1 L342.9 130.7 L340.3 131.2 L337.8 131.7 L335.3 132.2 L332.9 132.6 L330.5 133.0 L328.1 133.3 L325.8 133.6 L323.5 133.9 L321.3 134.1 L319.1 134.3 L316.9 134.5 L314.7 134.6 L312.6 134.7 L310.4 134.8 L308.3 134.9 L306.2 134.9 L304.2 135.0 L302.1 135.0 L300.0 135.0 Z" style="fill: #2C343D; stroke: none"></path>
-<path d="M300.0 185.0 L303.9 185.0 L307.9 185.1 L311.9 185.2 L316.0 185.5 L320.1 185.8 L324.4 186.2 L328.8 186.8 L333.3 187.5 L337.9 188.3 L342.7 189.3 L347.7 190.4 L352.7 191.7 L358.0 193.1 L363.3 194.8 L368.8 196.6 L374.4 198.7 L380.2 201.0 L386.1 203.4 L392.2 205.8 L398.5 208.3 L405.0 210.9 L411.8 213.5 L418.8 216.2 L426.0 218.8 L433.5 221.5 L441.2 224.2 L449.2 226.9 L457.5 229.6 L466.1 232.3 L475.0 234.9 L484.2 237.5 L493.8 240.0 L503.6 242.5 L513.8 244.9 L524.4 247.3 L535.4 249.5 L546.7 251.7 L558.4 253.7 L570.5 255.7 L583.0 257.5 L596.0 259.2 L609.4 260.8 L623.2 262.2 L637.5 263.5 L652.2 264.6 L667.5 265.6 L683.2 266.4 L699.4 267.0 L714.5 267.4 L729.5 267.7 L744.5 268.1 L759.5 268.5 L774.5 268.9 L789.5 269.2 L804.5 269.6 L819.5 270.0 L820.5 232.0 L805.5 231.6 L790.5 231.3 L775.5 230.9 L760.5 230.5 L745.5 230.1 L730.5 229.8 L715.5 229.4 L700.6 229.0 L684.8 228.4 L669.6 227.7 L654.9 226.7 L640.6 225.7 L626.8 224.4 L613.5 223.0 L600.7 221.5 L588.3 219.9 L576.3 218.1 L564.7 216.3 L553.5 214.3 L542.8 212.2 L532.4 210.1 L522.3 207.9 L512.6 205.6 L503.3 203.2 L494.3 200.8 L485.5 198.4 L477.1 195.9 L469.0 193.4 L461.1 190.8 L453.5 188.3 L446.2 185.7 L439.0 183.2 L432.1 180.6 L425.4 178.0 L418.9 175.5 L412.5 173.0 L406.3 170.5 L400.3 168.1 L394.3 165.7 L388.5 163.4 L382.9 160.9 L377.4 158.5 L372.0 156.0 L366.6 153.6 L361.3 151.2 L356.0 148.8 L350.7 146.6 L345.4 144.5 L340.1 142.5 L334.6 140.7 L329.1 139.1 L323.5 137.7 L317.7 136.6 L311.9 135.7 L306.0 135.2 L300.0 135.0 Z" style="fill: #2C343D; stroke: none"></path>
-<path d="M150 170 C160 210 150 250 118 300 L100 340" style="stroke-width: 18"></path>
-<path d="M612 244 C630 270 642 292 660 330" style="stroke-width: 16"></path>
-</g>
-<g style="fill: none; stroke: #141A20; stroke-linecap: round">
-<path d="M-80 160 L300 160" style="stroke-width: 44"></path>
-<path d="M300.0 182.0 L303.1 181.9 L306.2 181.8 L309.3 181.6 L312.3 181.2 L315.3 180.8 L318.3 180.3 L321.3 179.7 L324.2 179.1 L327.1 178.3 L330.0 177.6 L332.9 176.7 L335.7 175.8 L338.6 174.9 L341.4 173.9 L344.2 172.8 L346.9 171.7 L349.7 170.6 L352.5 169.4 L355.2 168.3 L358.0 167.0 L360.8 165.8 L363.6 164.5 L366.3 163.3 L369.1 162.0 L372.0 160.7 L374.8 159.4 L377.7 158.1 L380.6 156.8 L383.5 155.5 L386.5 154.2 L389.5 153.0 L392.6 151.8 L395.7 150.5 L398.8 149.2 L402.0 148.0 L405.2 146.7 L408.5 145.4 L411.8 144.0 L415.1 142.6 L418.5 141.2 L421.9 139.8 L425.3 138.3 L428.8 136.8 L432.4 135.3 L436.0 133.7 L439.6 132.1 L443.3 130.5 L447.2 128.9 L447.9 128.6 L448.6 128.2 L449.3 127.9 L450.0 127.6 L450.7 127.3 L451.4 127.0 L452.1 126.7 L452.8 126.4 L453.5 126.1 L454.3 125.7 L455.0 125.4 L455.7 125.1 L456.4 124.8 L457.1 124.5 L457.9 124.2 L458.6 123.9 L459.3 123.5 L460.1 123.2 L460.8 122.9 L461.6 122.6 L462.3 122.3 L463.1 122.0 L463.8 121.6 L464.6 121.3 L465.3 121.0 L466.1 120.7 L466.8 120.4 L467.6 120.0 L468.4 119.7 L469.1 119.4 L469.9 119.1 L470.7 118.7 L471.5 118.4 L472.2 118.1 L473.0 117.8 L473.8 117.5 L474.6 117.1 L475.4 116.8 L476.2 116.5 L477.0 116.2 L477.8 115.8 L478.6 115.5 L479.4 115.2 L480.2 114.9 L481.0 114.6 L481.8 114.2 L482.6 113.9 L483.5 113.6 L486.6 112.3 L489.9 111.1 L493.1 109.8 L496.5 108.6 L499.8 107.3 L503.3 106.1 L506.7 104.9 L510.3 103.7 L513.8 102.5 L517.5 101.3 L521.1 100.1 L524.9 99.0 L528.7 97.9 L532.5 96.8 L536.4 95.7 L540.4 94.7 L544.4 93.7 L548.5 92.8 L552.7 91.9 L556.9 91.0 L561.2 90.2 L565.5 89.4 L569.9 88.7 L574.4 88.0 L578.9 87.3 L583.4 86.7 L588.1 86.0 L592.8 85.4 L597.5 84.8 L602.3 84.2 L607.2 83.6 L612.2 83.0 L617.2 82.5 L622.2 82.0 L627.3 81.5 L632.5 81.0 L637.8 80.5 L643.1 80.1 L648.5 79.7 L654.0 79.3 L659.5 78.9 L665.1 78.6 L670.8 78.2 L676.5 77.9 L682.3 77.7 L688.2 77.4 L694.1 77.2 L700.2 77.0 L715.1 76.6 L730.1 76.2 L745.1 75.9 L760.1 75.5 L775.1 75.1 L790.1 74.7 L805.1 74.4 L820.1 74.0 L819.9 64.0 L804.9 64.4 L789.9 64.8 L774.9 65.1 L759.9 65.5 L744.9 65.9 L729.9 66.3 L714.9 66.6 L699.8 67.0 L693.8 67.2 L687.8 67.4 L681.9 67.7 L676.0 68.0 L670.2 68.3 L664.5 68.6 L658.9 68.9 L653.3 69.3 L647.8 69.7 L642.3 70.1 L637.0 70.6 L631.6 71.0 L626.4 71.5 L621.2 72.0 L616.1 72.6 L611.1 73.1 L606.1 73.7 L601.1 74.3 L596.3 74.9 L591.5 75.5 L586.7 76.1 L582.0 76.8 L577.4 77.4 L572.8 78.1 L568.3 78.8 L563.9 79.6 L559.5 80.3 L555.1 81.0 L550.8 81.6 L546.6 82.3 L542.3 82.9 L538.2 83.5 L534.1 84.1 L530.0 84.7 L526.0 85.3 L522.0 85.8 L518.0 86.4 L514.1 87.0 L510.3 87.6 L506.5 88.1 L502.7 88.7 L499.0 89.3 L495.3 89.9 L491.7 90.5 L488.1 91.1 L484.5 91.7 L481.0 92.4 L477.5 93.0 L476.7 93.2 L475.8 93.3 L474.9 93.5 L474.0 93.7 L473.1 93.8 L472.3 94.0 L471.4 94.2 L470.5 94.4 L469.6 94.5 L468.8 94.7 L467.9 94.9 L467.0 95.1 L466.2 95.2 L465.3 95.4 L464.4 95.6 L463.6 95.8 L462.7 96.0 L461.9 96.1 L461.0 96.3 L460.2 96.5 L459.4 96.7 L458.5 96.9 L457.7 97.1 L456.8 97.3 L456.0 97.5 L455.2 97.6 L454.4 97.8 L453.5 98.0 L452.7 98.2 L451.9 98.4 L451.1 98.6 L450.3 98.8 L449.4 99.0 L448.6 99.2 L447.8 99.4 L447.0 99.6 L446.2 99.8 L445.4 100.0 L444.6 100.2 L443.8 100.4 L443.1 100.7 L442.3 100.9 L441.5 101.1 L440.7 101.3 L439.9 101.5 L439.1 101.7 L438.4 101.9 L437.6 102.1 L433.6 103.2 L429.6 104.4 L425.6 105.6 L421.8 106.8 L418.0 108.0 L414.2 109.2 L410.6 110.5 L407.0 111.8 L403.5 113.1 L400.0 114.3 L396.7 115.7 L393.4 117.0 L390.1 118.3 L386.9 119.5 L383.8 120.8 L380.7 122.1 L377.6 123.3 L374.6 124.4 L371.6 125.5 L368.7 126.6 L365.8 127.5 L362.9 128.5 L360.1 129.3 L357.3 130.2 L354.5 130.9 L351.8 131.7 L349.1 132.3 L346.4 133.0 L343.8 133.6 L341.2 134.1 L338.7 134.6 L336.2 135.1 L333.7 135.5 L331.3 135.9 L328.9 136.2 L326.5 136.5 L324.2 136.8 L321.9 137.0 L319.6 137.3 L317.4 137.4 L315.1 137.6 L312.9 137.7 L310.8 137.8 L308.6 137.9 L306.4 137.9 L304.3 138.0 L302.1 138.0 L300.0 138.0 Z" style="fill: #141A20; stroke: none"></path>
-<path d="M300.0 182.0 L304.1 182.0 L308.1 182.1 L312.3 182.3 L316.4 182.5 L320.7 182.8 L325.0 183.3 L329.5 183.9 L334.1 184.6 L338.8 185.4 L343.7 186.4 L348.7 187.6 L353.8 188.9 L359.0 190.3 L364.4 192.0 L369.9 193.9 L375.5 195.9 L381.3 198.2 L387.2 200.6 L393.3 203.0 L399.6 205.5 L406.1 208.1 L412.8 210.7 L419.8 213.4 L427.0 216.0 L434.5 218.7 L442.2 221.4 L450.2 224.1 L458.4 226.8 L467.0 229.4 L475.8 232.0 L485.0 234.6 L494.5 237.1 L504.3 239.6 L514.5 242.0 L525.0 244.3 L535.9 246.6 L547.2 248.7 L558.9 250.8 L571.0 252.7 L583.4 254.6 L596.3 256.3 L609.7 257.8 L623.5 259.3 L637.7 260.5 L652.4 261.7 L667.6 262.6 L683.3 263.4 L699.5 264.0 L714.6 264.4 L729.6 264.7 L744.6 265.1 L759.6 265.5 L774.6 265.9 L789.6 266.2 L804.6 266.6 L819.6 267.0 L820.4 235.0 L805.4 234.6 L790.4 234.3 L775.4 233.9 L760.4 233.5 L745.4 233.1 L730.4 232.8 L715.4 232.4 L700.5 232.0 L684.7 231.4 L669.4 230.7 L654.7 229.7 L640.4 228.6 L626.6 227.4 L613.2 226.0 L600.3 224.5 L587.9 222.9 L575.8 221.1 L564.2 219.2 L553.0 217.2 L542.2 215.2 L531.7 213.0 L521.7 210.8 L511.9 208.5 L502.5 206.1 L493.5 203.7 L484.7 201.3 L476.2 198.8 L468.1 196.2 L460.2 193.7 L452.5 191.1 L445.1 188.5 L438.0 186.0 L431.0 183.4 L424.3 180.8 L417.8 178.3 L411.4 175.8 L405.2 173.3 L399.1 170.9 L393.2 168.5 L387.4 166.2 L381.8 163.7 L376.3 161.3 L370.9 158.8 L365.6 156.4 L360.3 154.0 L355.1 151.7 L349.9 149.5 L344.6 147.4 L339.3 145.4 L334.0 143.6 L328.5 142.0 L323.0 140.7 L317.4 139.5 L311.7 138.7 L305.9 138.2 L300.0 138.0 Z" style="fill: #141A20; stroke: none"></path>
-<path d="M150 170 C160 210 150 250 118 300 L100 340" style="stroke-width: 12"></path>
-<path d="M612 244 C630 270 642 292 660 330" style="stroke-width: 10"></path>
-</g>
-<path class="bloom-l" d="M300 160 C380 160 440 240 700 248 L820 251"></path>
-<path class="wfl {{ flCls }}" d="M456.7 110.6 C512.1 92.5 587.3 75.5 700 72 L820 69"></path>
-<rect x="-40" width="816" height="320" style="fill: url(#simVig); pointer-events: none"></rect>
-<g style="fill: none; stroke: #4A535D; stroke-width: 1.2">
-<path d="M-26 34 V14 H-6"></path>
-<path d="M742 14 H762 V34"></path>
-<path d="M-26 286 V306 H-6"></path>
-<path d="M742 306 H762 V286"></path>
-</g>
-<text x="0" y="27" class="mono" style="fill: #7D8792; font-size: 9px; letter-spacing: .16em">SIMULATED VIEW</text>
-<text x="300" y="116" class="mono" style="fill: #7D8792; font-size: 11px; letter-spacing: .14em; text-anchor: middle">FORK</text>
-<circle class="ping" cx="539" cy="231" r="9" style="fill: none; stroke: var(--signal); stroke-width: 1.5"></circle>
-<circle cx="539" cy="231" r="7" style="fill: {{ targetFill }}; stroke: var(--signal); stroke-width: 2; transition: fill .4s"></circle>
-<text x="539" y="286" class="mono" style="fill: #C9D0D6; font-size: 11px; letter-spacing: .14em; text-anchor: middle">TARGET</text>
-<path class="sim-cath" pathLength="1000" d="M-40 160 L300 160 C380 160 440 80 700 72" style="stroke-dashoffset: {{ cath.up }}"></path>
-<path class="sim-cath" pathLength="1000" d="M-40 160 L300 160 C380 160 440 240 700 248" style="stroke-dashoffset: {{ cath.down }}"></path>
-<path class="sim-glow" pathLength="1000" d="M-40 160 L300 160 C380 160 440 80 700 72" style="stroke-dashoffset: {{ wire.up }}"></path>
-<path class="sim-glow" pathLength="1000" d="M-40 160 L300 160 C380 160 440 240 700 248" style="stroke-dashoffset: {{ wire.down }}"></path>
-<path class="sim-wire" pathLength="1000" d="M-40 160 L300 160 C380 160 440 80 700 72" style="stroke-dashoffset: {{ wire.up }}"></path>
-<path class="sim-wire" pathLength="1000" d="M-40 160 L300 160 C380 160 440 240 700 248" style="stroke-dashoffset: {{ wire.down }}"></path>
-<g class="sim-tip" style="transform: {{ tipT }}"><g class="{{ shkCls }}">
-<path d="M-2 0 C6 0 11 -2 15 -9" style="fill: none; stroke: var(--signal); stroke-width: 3; stroke-linecap: round"></path>
-<circle cx="15" cy="-9" r="2.4" style="fill: #FFFFFF"></circle>
-</g></g>
-</svg>
-</div>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px; padding: 20px clamp(20px, 3vw, 32px) 28px; border-top: 1px solid rgba(236,238,240,.08)">
-<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-<ol class="mono" aria-label="Goals" style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px">
-<li class="{{ ck.fork }}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle class="ck-ring" cx="8" cy="8" r="7"></circle><path class="ck-tick" pathLength="1" d="M4.8 8.2 L7 10.4 L11.2 6"></path></svg>Reach the fork</li>
-<li class="{{ ck.aim }}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle class="ck-ring" cx="8" cy="8" r="7"></circle><path class="ck-tick" pathLength="1" d="M4.8 8.2 L7 10.4 L11.2 6"></path></svg>Enter the lower branch</li>
-<li class="{{ ck.target }}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle class="ck-ring" cx="8" cy="8" r="7"></circle><path class="ck-tick" pathLength="1" d="M4.8 8.2 L7 10.4 L11.2 6"></path></svg>Reach the target</li>
-</ol>
-<p aria-live="polite" style="max-width: 640px; font-size: 16px; line-height: 1.5; color: {{ msgColor }}">{{ msg }}</p>
-</div>
-<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px">
-<div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px">
-<button type="button" class="ctl" onClick="{{ rotate }}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M13 8 A5 5 0 1 1 11.5 4.4"></path><path d="M12 1.5 V4.8 H8.7"></path></svg>Rotate tip</button>
-<button type="button" class="ctl" onClick="{{ retract }}" disabled="{{ retDisabled }}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M13 8 H3"></path><path d="M7 4 L3 8 L7 12"></path></svg>Pull back</button>
-<button type="button" class="ctl ctl-primary" onClick="{{ advance }}" disabled="{{ advDisabled }}">Advance<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M3 8 H13"></path><path d="M9 4 L13 8 L9 12"></path></svg></button>
-<button type="button" class="ctl" onClick="{{ reset }}" aria-label="Reset the simulation"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round"><path d="M3 8 A5 5 0 1 0 4.5 4.4"></path><path d="M4 1.5 V4.8 H7.3"></path></svg></button>
-</div>
-<div class="mono kbd-hint" style="display: flex; align-items: center; gap: 6px; font-size: 11px; letter-spacing: .06em; color: #7D8792"><kbd aria-label="Left arrow"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round"><path d="M8.5 5 H1.5"></path><path d="M4.5 2 L1.5 5 L4.5 8"></path></svg></kbd><kbd aria-label="Right arrow"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" style="fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round"><path d="M1.5 5 H8.5"></path><path d="M5.5 2 L8.5 5 L5.5 8"></path></svg></kbd><span>move</span><span style="opacity: .5">·</span><kbd>R</kbd><span>rotate</span></div>
-</div>
-</div>
-</div>
 </div>
 </section>
 
@@ -1245,44 +1133,6 @@ html{scroll-behavior:smooth}
 <p style="font-size: 16px; line-height: 1.55; color: #9AA3AD">Beside the patient, the robot moves the catheter and guidewire&nbsp;— with the local care team in the room.</p>
 <div class="mono io"><span>In</span><b>Commands</b><span>Out</span><b>Instrument motion</b></div>
 </article>
-</div>
-
-<div style="margin-top: 96px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr)); gap: 24px 72px; align-items: end">
-<h3 class="rv" style="font-size: clamp(28px, 3vw, 40px); font-weight: 500; line-height: 1.05; letter-spacing: -0.03em">The motions, mapped.</h3>
-<p class="rv" style="max-width: 560px; font-size: 17px; line-height: 1.6; color: #AEB6BF">Every endovascular procedure is built from a few fundamental motions. A robot that reproduces them faithfully can carry a physician’s skill across distance.</p>
-</div>
-<div class="rv tri tri-tight" style="margin-top: 40px; gap: 16px">
-<div class="spot" onPointerMove="{{ spot }}" style="background: #12161B; border: 1px solid rgba(236,238,240,.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
-<div class="mono" style="display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792"><span>Motion 01</span><span>Linear</span></div>
-<svg viewBox="0 0 280 120" aria-hidden="true" style="width: 100%; height: auto; display: block; background: #0D1115; border-radius: 12px">
-<path d="M0 46 H280 M0 74 H280" style="fill: none; stroke: #2C343D; stroke-width: 1.5"></path>
-<g class="g-push"><path d="M-60 60 H150" style="fill: none; stroke: var(--signal); stroke-width: 3; stroke-linecap: round"></path><path d="M150 60 C156 60 160 58 163 54" style="fill: none; stroke: var(--signal); stroke-width: 3; stroke-linecap: round"></path></g>
-<path d="M196 96 H236 M228 90 L236 96 L228 102 M84 96 H44 M52 90 L44 96 L52 102" style="fill: none; stroke: #7D8792; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"></path>
-</svg>
-<h4 style="font-size: 20px; font-weight: 500; letter-spacing: -0.015em">Advance &amp; retract</h4>
-<p style="font-size: 15px; line-height: 1.55; color: #9AA3AD">Move the wire forward or back in fine, controlled increments.</p>
-</div>
-<div class="spot" onPointerMove="{{ spot }}" style="background: #12161B; border: 1px solid rgba(236,238,240,.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
-<div class="mono" style="display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792"><span>Motion 02</span><span>Rotary</span></div>
-<svg viewBox="0 0 280 120" aria-hidden="true" style="width: 100%; height: auto; display: block; background: #0D1115; border-radius: 12px">
-<circle cx="140" cy="60" r="34" style="fill: none; stroke: #2C343D; stroke-width: 1.5"></circle>
-<path d="M96.8 44.3 A46 46 0 0 1 183.2 44.3" style="fill: none; stroke: #7D8792; stroke-width: 1.4; stroke-linecap: round"></path>
-<path d="M177 40.2 L183.9 46.2 L185.4 37.2" style="fill: none; stroke: #7D8792; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round"></path>
-<g class="g-spin"><circle cx="140" cy="60" r="3" style="fill: var(--signal)"></circle><path d="M140 60 Q152 60 158 50" style="fill: none; stroke: var(--signal); stroke-width: 3; stroke-linecap: round"></path></g>
-</svg>
-<h4 style="font-size: 20px; font-weight: 500; letter-spacing: -0.015em">Rotate</h4>
-<p style="font-size: 15px; line-height: 1.55; color: #9AA3AD">Twist the wire so its curved tip points into the right branch.</p>
-</div>
-<div class="spot" onPointerMove="{{ spot }}" style="background: #12161B; border: 1px solid rgba(236,238,240,.08); border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px">
-<div class="mono" style="display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: #7D8792"><span>Motion 03</span><span>Dual</span></div>
-<svg viewBox="0 0 280 120" aria-hidden="true" style="width: 100%; height: auto; display: block; background: #0D1115; border-radius: 12px">
-<path d="M0 46 H280 M0 74 H280" style="fill: none; stroke: #2C343D; stroke-width: 1.5"></path>
-<g class="g-b"><path d="M-60 60 H190" style="fill: none; stroke: var(--signal); stroke-width: 3; stroke-linecap: round"></path></g>
-<g class="g-a"><path d="M-60 60 H150" style="fill: none; stroke: #C9D1D9; stroke-opacity: .45; stroke-width: 12; stroke-linecap: round"></path></g>
-</svg>
-<h4 style="font-size: 20px; font-weight: 500; letter-spacing: -0.015em">Coordinate</h4>
-<p style="font-size: 15px; line-height: 1.55; color: #9AA3AD">Move catheter and guidewire independently or together, the way a physician’s two hands do.</p>
-</div>
 </div>
 
 <div class="rv" style="margin-top: 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; padding: 24px 0; border-top: 1px solid rgba(236,238,240,.14); border-bottom: 1px solid rgba(236,238,240,.14)">
@@ -1397,7 +1247,7 @@ var DCLogic = window.DCLogic;
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { menu: false, map: 'today', dest: 'brain', step: 1, playing: false, pos: 0, up: true, branch: null, moves: 0, bump: 0, blocked: false };
+    this.state = { menu: false, map: 'today', dest: 'brain', step: 1, playing: false };
     this.timer = null;
     this.toggleMenu = () => this.setState({ menu: !this.state.menu });
     this.closeMenu = () => this.setState({ menu: false });
@@ -1424,27 +1274,6 @@ class Component extends DCLogic {
     this.nextStep = () => { this.stopPlay(); this.setState({ playing: false, step: (this.state.step + 1) % 4 }); };
     this.pickStep = (i) => () => { this.stopPlay(); this.setState({ playing: false, step: i }); };
     this.pickDest = (id) => () => this.setState({ dest: id });
-    this.rotate = () => { const s = this.state; this.setState({ up: !s.up, moves: s.moves + 1, blocked: false }); };
-    this.advance = () => {
-      const s = this.state;
-      if (s.branch === 'down' && s.pos === 6) return;
-      if (s.branch === 'up' && s.pos >= 5) { this.setState({ bump: s.bump + 1, blocked: true, moves: s.moves + 1 }); return; }
-      if (s.pos === 3) { this.setState({ pos: 4, branch: s.up ? 'up' : 'down', moves: s.moves + 1, blocked: false }); return; }
-      this.setState({ pos: s.pos + 1, moves: s.moves + 1, blocked: false });
-    };
-    this.retract = () => {
-      const s = this.state;
-      if (s.pos === 0) return;
-      const pos = s.pos - 1;
-      this.setState({ pos: pos, branch: pos <= 3 ? null : s.branch, moves: s.moves + 1, blocked: false });
-    };
-    this.reset = () => this.setState({ pos: 0, up: true, branch: null, moves: 0, bump: 0, blocked: false });
-    this.simKey = (e) => {
-      const k = e && e.key;
-      if (k === 'ArrowRight' || k === 'ArrowUp') { e.preventDefault(); this.advance(); }
-      else if (k === 'ArrowLeft' || k === 'ArrowDown') { e.preventDefault(); this.retract(); }
-      else if (k === 'r' || k === 'R') { e.preventDefault(); this.rotate(); }
-    };
   }
 
   componentWillUnmount() { this.stopPlay(); }
@@ -1485,33 +1314,6 @@ class Component extends DCLogic {
     }));
     const segs = STEPS.map((t, i) => ({ cls: i < s.step ? 'pseg done' : (i === s.step ? (s.playing ? 'pseg now play' : 'pseg now') : 'pseg') }));
 
-    const L = 752.3;
-    const SS = [120, 200, 280, 340, 420, 505, 590];
-    const P = {
-      main: [[80, 160, 0], [160, 160, 0], [240, 160, 0], [300, 160, 0]],
-      up: [[377.1, 140.7, -21.6], [456.6, 110.6, -18.1], [538.8, 89.2, -11.3]],
-      down: [[377.1, 179.3, 21.6], [456.6, 209.4, 18.1], [538.8, 230.8, 11.3]]
-    };
-    const toOff = (len) => (1000 - Math.max(0, len) * 1000 / L).toFixed(1);
-    const sNow = SS[s.pos];
-    const wNow = toOff(sNow), cNow = toOff(sNow - 70);
-    const wJ = toOff(Math.min(sNow, 340)), cJ = toOff(Math.min(sNow - 70, 340));
-    const wire = { up: s.branch === 'down' ? wJ : wNow, down: s.branch === 'up' ? wJ : wNow };
-    const cath = { up: s.branch === 'down' ? cJ : cNow, down: s.branch === 'up' ? cJ : cNow };
-    const pt = s.pos <= 3 ? P.main[s.pos] : P[s.branch][s.pos - 4];
-    const tipT = 'translate(' + pt[0] + 'px, ' + pt[1] + 'px) rotate(' + pt[2] + 'deg) scaleY(' + (s.up ? 1 : -1) + ')';
-    const done = s.branch === 'down' && s.pos === 6;
-    let msg = 'Goal: reach the target in the lower branch. Advance to the fork, then rotate the tip to choose your path.';
-    if (done) msg = 'Target reached in ' + s.moves + ' moves — the minimum is 7. Push, pull, twist: that’s the core skill. Now imagine doing it with the same precision from another city.';
-    else if (s.blocked) msg = 'Resistance — the vessel narrows and the wire won’t pass. This branch never reaches the target: pull back to the fork, rotate the tip and try again.';
-    else if (s.branch === 'up') msg = 'You’ve entered the upper branch. The target is in the lower one.';
-    else if (s.branch === 'down') msg = 'Lower branch. Keep advancing toward the target.';
-    else if (s.pos === 3) msg = 'You’re at the fork. The wire follows its tip — rotate to aim it, then advance.';
-    let posLabel = 'Main vessel';
-    if (done) posLabel = 'Target';
-    else if (s.branch === 'up') posLabel = 'Upper branch';
-    else if (s.branch === 'down') posLabel = 'Lower branch';
-    else if (s.pos === 3) posLabel = 'At the fork';
     const reach = s.map === 'remote' ? 47 : 14;
 
     return {
@@ -1531,19 +1333,6 @@ class Component extends DCLogic {
       playing: s.playing, notPlaying: !s.playing, playLabel: s.playing ? 'Pause' : 'Play the procedure',
       togglePlay: this.togglePlay,
       nextStep: this.nextStep, nextLabel: s.step === 3 ? 'Start again' : 'Next step',
-      wire: wire, cath: cath, tipT: tipT,
-      simCls: done ? 'is-done' : '',
-      shkCls: s.bump === 0 ? '' : (s.bump % 2 ? 'shk-a' : 'shk-b'),
-      flCls: s.bump === 0 ? '' : (s.bump % 2 ? 'fl-a' : 'fl-b'),
-      ck: { fork: s.pos >= 3 ? 'ck ok' : 'ck', aim: s.branch === 'down' ? 'ck ok' : 'ck', target: done ? 'ck ok' : 'ck' },
-      moves: s.moves,
-      tipLabel: s.up ? 'Angled up' : 'Angled down', posLabel: posLabel,
-      msg: msg, msgColor: done ? 'var(--signal)' : (s.blocked ? '#ECEEF0' : '#C9D0D6'),
-      targetFill: done ? 'var(--signal)' : '#0A0C0F',
-      advDisabled: done,
-      retDisabled: s.pos === 0,
-      rotate: this.rotate, advance: this.advance, retract: this.retract, reset: this.reset,
-      simKey: this.simKey
     };
   }
 }
